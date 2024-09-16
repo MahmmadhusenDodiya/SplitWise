@@ -1,0 +1,40 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Text Area 3,Comments
+1,Document,,,,,,,,,Draft,Blank diagram,,,
+2,Page,,,,,,,,,,Page 1,,,
+3,Class,UML,2,,,,,,,,<<Expence>>,​-splits:List<Split>,"​+validate():boolean
+-processSplit():void",
+4,Class,UML,2,,,,,,,,User,"​- id:String
+- name:String
+- email:String
+- phone:String",,
+5,Class,UML,2,,,,,,,,<< Split >>,"​- user:User
++ amount:Double",,
+6,Class,UML,2,,,,,,,,EqualSplit,,,
+7,Class,UML,2,,,,,,,,ExactSplit,,,
+8,Class,UML,2,,,,,,,,PercentSplit,​-Percentage:Integer,,
+9,Class,UML,2,,,,,,,,ExpenseMetadata,"​- imgUrl:String
+- name:String
+- notes:String",,
+10,Class,UML,2,,,,,,,,EqualExpense,,​+validate():boolean,
+11,Class,UML,2,,,,,,,,ExactExpense,,,
+12,Class,UML,2,,,,,,,,PercentExpense,,​+validate():boolean,
+13,Text,Standard,2,,,,,,,,​+validate():boolean,,,
+14,Class,UML,2,,,,,,,,ExpenseFactory,,"​+createExpense(ExpenseType expenseType, Double amount, User paidBy, List<Split> splits, ExpenseMetadata expenseMetadata):Expence",
+15,Class,UML,2,,,,,,,,SplitWiseSystem,"
+- instance:SplitWiseSystem",​-SplitWiseSystem():void,
+16,Class,UML,2,,,,,,,,ExpenseManager,"​-expenses:List<Expense> 
+-userMap:Map<String, User> 
+-balanceSheet:Map<String, Map<String, Double> > ","​+addUser(User):void
++addExpense(ExpenseType expenseType, double amount, String paidBy, List<Split> splits, ExpenseMetadata expenseMetadata)",
+17,Line,,2,,,5,3,None,Composition,,,,,
+18,Line,,2,,,6,5,None,Arrow,,,,,
+19,Line,,2,,,7,5,None,Arrow,,,,,
+20,Line,,2,,,8,5,None,Arrow,,,,,
+21,Line,,2,,,9,3,None,Composition,,,,,
+22,Line,,2,,,10,3,None,Arrow,,,,,
+23,Line,,2,,,11,3,None,Arrow,,,,,
+24,Line,,2,,,12,3,None,Arrow,,,,,
+25,Line,,2,,,14,3,None,Arrow,,,,,
+26,Line,,2,,,4,16,None,Aggregation,,,,,
+27,Line,,2,,,16,14,None,Equilateral Arrow,,,,,
+28,Line,,2,,,15,16,None,Arrow,,,,,
